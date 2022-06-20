@@ -1,6 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer")
-const fs = require("fs")
+//const fs = require("fs")
+const gen = require("./utils/generateMarkdown")
+
+
+var badge
+var licenseInfo
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -15,26 +20,22 @@ const questions = [
     message: "Describe it:",
     },
 
-    // {
-    // type: 'input',
-    // name: 'contents',
-    // message: "Table of Contents:",
-    // },
-    // {
-    // type: 'input',
-    // name: 'installation',
-    // message: "Installation instructions:",
-    // },
-    // {
-    // type: 'input',
-    // name: 'usage',
-    // message: "Usage Information:",
-    // },
-    // {
-    // type: 'input',
-    // name: 'contribute',
-    // message: "Contribution Guidelines:",
-    // },
+
+    {
+    type: 'input',
+    name: 'installation',
+    message: "Installation instructions:",
+    },
+    {
+    type: 'input',
+    name: 'usage',
+    message: "Usage Information:",
+    },
+    {
+    type: 'input',
+    name: 'contribute',
+    message: "Contribution Guidelines:",
+    },
     // {
     // type: 'input',
     // name: 'test',
@@ -44,35 +45,39 @@ const questions = [
       type: 'list',
       name: 'license',
       message: 'Which license?',
-      choices: ['Apache', 
-                'BSD 2', 
-                'BSD3',
-                'GPL',
-                'LGPL'],
+      choices: ['Apache',
+                'GNU GPL',
+                'MIT',
+                'None',
+              ]
     },
+    {
+      type: 'input',
+      name: 'name',
+      message: "Your full name?",
+    },
+    // {
+    //   type: 'input',
+    //   name: 'user',
+    //   message: "GitHub Username?",
+    // },
+    // {
+    //   type: 'input',
+    //   name: 'email',
+    //   message: "Email address?",
+    // },
+//     {
+//       type: 'input',
+//       name: 'contact',
+//       message: "Contact instructions?",
+//     },
 ]
-
-var write = fs.createWriteStream('test.txt', {
-  flags: 'a' 
-})
-
-
-// TODO: Create a function to write README file
-function writeToFile(data) {
-  write.write("# "+data.title.toString()+'\r\n')
-  write.write("## "+data.desc.toString()+'\r\n')
-  write.write("## "+data.contents.toString()+'\r\n')
-  write.write("## "+data.installation.toString()+'\r\n')
-  write.write("## "+data.usage.toString()+'\r\n')
-  write.write("## "+data.contribute.toString()+'\r\n')
-  write.write("## "+data.test.toString()+'\r\n')
-}
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then((answers) => {
-    //console.log(JSON.stringify(answers, null, '  '))
-    writeToFile(answers)
+  inquirer.prompt(questions).then((data) => {
+    gen.renderLicense(data.license, data)
+    gen.generateMarkdown(data)
   })
 }
 
