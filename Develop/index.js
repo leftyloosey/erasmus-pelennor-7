@@ -56,24 +56,19 @@ const questions = [
       name: 'name',
       message: "Your full name?",
     },
-    // {
-    //   type: 'input',
-    //   name: 'user',
-    //   message: "GitHub Username?",
-    // },
-    // {
-    //   type: 'input',
-    //   name: 'email',
-    //   message: "Email address?",
-    // },
-//     {
-//       type: 'input',
-//       name: 'contact',
-//       message: "Contact instructions?",
-//     },
+    {
+      type: 'input',
+      name: 'user',
+      message: "GitHub Username?",
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: "Email address?",
+    },
 ]
 
-// TODO: Create a function to initialize app
+// a function to initialize app
 function init() {
   inquirer.prompt(questions).then((data) => {
     gen.renderLicense(data.license, data)

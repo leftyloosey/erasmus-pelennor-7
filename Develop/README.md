@@ -1,30 +1,35 @@
-# k
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+# a good readme
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
 ## Table of Contents:
-### [About](#description)
+### [General](#description)
 ### [Installation Instructions](#installation)
 ### [Usage Info](#usage)
 ### [Contribution Guidelines](#contribution)
 ### [Licensing Data](#license)
+### [Contact Info](#questions)
 ## Description 
-k 
+it is so good 
 ## Installation 
-k 
+you just install it 
 ## Usage 
-k
+and use it
 ## Contribution 
-k
+and contribute to it so lovingly
 ## License 
-Copyright 2022 k
+Copyright (C) 2022  David Hardin
     
-          Licensed under the Apache License, Version 2.0 (the "License");
-          you may not use this file except in compliance with the License.
-          You may obtain a copy of the License at
-       
-            http://www.apache.org/licenses/LICENSE-2.0
-       
-          Unless required by applicable law or agreed to in writing, software
-          distributed under the License is distributed on an "AS IS" BASIS,
-          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
-          implied. See the License for the specific language governing 
-          permissions and limitations under the License.
+          This program is free software: you can redistribute it and/or modify
+          it under the terms of the GNU General Public License as published by
+          the Free Software Foundation, either version 3 of the License, or
+          (at your option) any later version.
+      
+          This program is distributed in the hope that it will be useful,
+          but WITHOUT ANY WARRANTY; without even the implied warranty of
+          MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+          GNU General Public License for more details.
+      
+          You should have received a copy of the GNU General Public License
+          along with this program.  If not, see http://www.gnu.org/licenses.
+## Questions? 
+Email me [here.](mailto:thisgoestodavid@gmail.com) 
+And see my github [here.](https://www.github.com/leftyloosey) 

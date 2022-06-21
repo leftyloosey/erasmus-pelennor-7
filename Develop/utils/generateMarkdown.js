@@ -4,6 +4,7 @@ const fs = require("fs")
 const write = fs.createWriteStream('README.md', {
   flags: 'a' })
 
+// a function for rendering the license
 function renderLicense(license, data) {
     switch (license) {
         case "Apache":
@@ -72,51 +73,38 @@ function renderLicense(license, data) {
 
 }}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
+ // a function to generate markdown for README
 function generateMarkdown(data) {
-  // return `# ${data.title}
-
+      
       write.write(`# ${data.title}\r\n`)
       write.write(`${badge} \r\n`)
       write.write(`## Table of Contents:\r\n`)
-      write.write(`### [About](#description)\r\n`)
+      write.write(`### [General](#description)\r\n`)
       write.write(`### [Installation Instructions](#installation)\r\n`)
       write.write(`### [Usage Info](#usage)\r\n`)
       write.write(`### [Contribution Guidelines](#contribution)\r\n`)
       write.write(`### [Licensing Data](#license)\r\n`)
+      write.write(`### [Contact Info](#questions)\r\n`)
       
-
       write.write(`## Description \r\n`)
       write.write(`${data.desc} \r\n`)
    
-
       write.write(`## Installation \r\n`)
       write.write(`${data.installation} \r\n`)
-
-      
 
       write.write(`## Usage \r\n`)
       write.write(data.usage+"\r\n")
 
-    
-     
       write.write(`## Contribution \r\n`)
       write.write(data.contribute+"\r\n")
-
-  
- 
+      
       write.write(`## License \r\n`)
       write.write(licenseInfo +"\r\n")
 
-
+      write.write(`## Questions? \r\n`)
+      write.write(`Email me [here.](mailto:${data.email}) \r\n`)
+      write.write(`And see my github [here.](https://www.github.com/${data.user}) \r\n`)
 }
 
 exports.renderLicense = renderLicense
