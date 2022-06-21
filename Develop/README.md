@@ -10,9 +10,11 @@
 ## Description 
 it is so good 
 ## Installation 
-you just install it 
+you install it 
 ## Usage 
 and use it
+## Testing 
+and test it
 ## Contribution 
 and contribute to it so lovingly
 ## License 

@@ -1,5 +1,3 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 const fs = require("fs")
 const write = fs.createWriteStream('README.md', {
   flags: 'a' })
@@ -95,6 +93,9 @@ function generateMarkdown(data) {
 
       write.write(`## Usage \r\n`)
       write.write(data.usage+"\r\n")
+
+      write.write(`## Testing \r\n`)
+      write.write(data.test+"\r\n")
 
       write.write(`## Contribution \r\n`)
       write.write(data.contribute+"\r\n")

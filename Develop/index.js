@@ -33,14 +33,14 @@ const questions = [
     },
     {
     type: 'input',
-    name: 'contribute',
-    message: "Contribution Guidelines:",
+    name: 'test',
+    message: "Testing Instructions:",
     },
-    // {
-    // type: 'input',
-    // name: 'test',
-    // message: "Testing Instructions:",
-    // }
+    {
+      type: 'input',
+      name: 'contribute',
+      message: "Contribution Guidelines:",
+    },
     {
       type: 'list',
       name: 'license',
