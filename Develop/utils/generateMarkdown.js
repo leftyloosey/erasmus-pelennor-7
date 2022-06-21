@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const fs = require("fs")
-const write = fs.createWriteStream('test.md', {
+const write = fs.createWriteStream('README.md', {
   flags: 'a' })
 
 function renderLicense(license, data) {
@@ -108,6 +108,8 @@ function generateMarkdown(data) {
 
       write.write(`--- \r\n`)
       write.write(`## Contribution Guidelines \r\n`)
+      write.write(`--- \r\n`)
+
       write.write(` ${data.contribute} \r\n`)
 
       write.write(`--- \r\n`)
@@ -115,8 +117,6 @@ function generateMarkdown(data) {
       write.write(` ${licenseInfo} \r\n`)
 
 }
-//module.exports = renderLicenseBadge;
 
-//module.exports = foo;
 exports.renderLicense = renderLicense
 exports.generateMarkdown = generateMarkdown
