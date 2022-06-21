@@ -7,14 +7,22 @@
 ### [Contribution Guidelines](#contribute)
 ### [License](#License)
  --- 
-## Description 
- it could be great 
+## Description
+
+ it could be great
+
   --- 
+
 ## Installation 
+
 you install it 
+
   --- 
+  
 ## Usage 
+
  and use it
+
 --- 
 ## Contribution Guidelines 
 --- 
