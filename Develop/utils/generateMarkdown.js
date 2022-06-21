@@ -93,14 +93,19 @@ function generateMarkdown(data) {
       write.write(`### [Contribution Guidelines](#contribute)\r\n`)
       write.write(`### [License](#License)\r\n`)
       
+      write.write(` `)
       write.write(`--- \r\n`)
       write.write(`## Description \r\n`)
       write.write(` ${data.desc} \r\n`)
+      write.write(` `)
 
+      write.write(` `)
       write.write(`--- \r\n`)
       write.write(`## Installation \r\n`)
       write.write(`${data.installation} \r\n`)
+      write.write(` `)
       
+      write.write(` `)
       write.write(`--- \r\n`)
       write.write(`## Usage \r\n`)
       write.write(` ${data.usage}\r\n`)
