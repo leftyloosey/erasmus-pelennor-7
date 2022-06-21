@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const fs = require("fs")
-const write = fs.createWriteStream('./README.md', {
+const write = fs.createWriteStream('README.md', {
   flags: 'a' })
 
 function renderLicense(license, data) {
@@ -87,41 +87,34 @@ function generateMarkdown(data) {
       write.write(`# ${data.title}\r\n`)
       write.write(`${badge} \r\n`)
       write.write(`## Table of Contents:\r\n`)
-      write.write(`### [Description](#description)\r\n`)
-      write.write(`### [Installation](#installation)\r\n`)
-      write.write(`### [Usage](#usage)\r\n`)
-      write.write(`### [Contribution Guidelines](#contribute)\r\n`)
-      write.write(`### [License](#License)\r\n`)
+      write.write(`### [About](#description)\r\n`)
+      write.write(`### [Installation Instructions](#installation)\r\n`)
+      write.write(`### [Usage Info](#usage)\r\n`)
+      write.write(`### [Contribution Guidelines](#contribution)\r\n`)
+      write.write(`### [Licensing Data](#license)\r\n`)
       
-      write.write(` `)
-      write.write(`--- \r\n`)
-      write.write(`## Description \r\n`)
-      write.write(` ${data.desc} \r\n`)
-      write.write(` `)
 
-      write.write(` `)
-      write.write(`--- \r\n`)
+      write.write(`## Description \r\n`)
+      write.write(`${data.desc} \r\n`)
+   
+
       write.write(`## Installation \r\n`)
       write.write(`${data.installation} \r\n`)
-      write.write(` `)
+
       
-      write.write(` `)
-      write.write(`--- \r\n`)
+
       write.write(`## Usage \r\n`)
-      write.write(` ${data.usage}\r\n`)
-      write.write(` `)
+      write.write(data.usage+"\r\n")
 
-      write.write(` `)
-      write.write(`--- \r\n`)
-      write.write(`## Contribution Guidelines \r\n`)
-      write.write(` ${data.contribute} \r\n`)
-      write.write(` `)
+    
+     
+      write.write(`## Contribution \r\n`)
+      write.write(data.contribute+"\r\n")
 
-      write.write(` `)
-      write.write(`--- \r\n`)
-      write.write(`## License {#License} \r\n`)
-      write.write(` ${licenseInfo} \r\n`)
-      write.write(` `)
+  
+ 
+      write.write(`## License \r\n`)
+      write.write(licenseInfo +"\r\n")
 
 
 }
